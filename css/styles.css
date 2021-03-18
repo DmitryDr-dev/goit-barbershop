@@ -41,7 +41,7 @@ html {
 *::before {
   box-sizing: inherit;
 }
-/* tags */
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -49,6 +49,17 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
 img {
   display: block;
   height: auto;
@@ -81,8 +92,9 @@ address {
 
 .list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
-  margin: 0;
 }
 
 .container {
@@ -106,6 +118,7 @@ address {
   margin-top: -30px;
 }
 .grid-item {
+    /* flex-basis: calc(100% / var(--grid-item) - 30px); */
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   margin-left: 30px;
   margin-top: 30px;
@@ -123,26 +136,31 @@ address {
   color: var(--title-color);
   cursor: pointer;
 }
+
 .button:hover,
 .button:focus {
-  background-color: var(--accent-color);
   color: #ffffff;
+  background-color: var(--accent-color);
 }
 
 .menu {
   display: inline-flex;
 }
+
 .menu-item:not(:last-child) {
   margin-right: 40px;
 }
-.menu-link {
-}
 
 .socials-list {
+  display: flex;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   color: var(--title-color);
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .copyright {
@@ -152,11 +170,13 @@ address {
   letter-spacing: 0.2em;
   color: var(--dark-bg-text-color);
 }
+
 .logo {
   display: block;
 }
 
 .title {
+  margin-bottom: 20px;
   font-family: var(--title-font);
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -164,6 +184,7 @@ address {
 }
 
 .title-label {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -181,10 +202,12 @@ address {
   font-size: 42px;
   line-height: 1.167;
 }
+
 .section {
   padding-top: 130px;
   padding-bottom: 130px;
 }
+
 .header {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -198,18 +221,23 @@ address {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
+
 .header .logo {
   margin-right: 70px;
 }
+
 .header .button {
   margin-left: 40px;
 }
+
 .navigation {
   display: flex;
   align-items: center;
   margin-right: auto;
 }
+
 .hero {
   display: flex;
   align-items: center;
@@ -221,17 +249,21 @@ address {
   /* если стека некачественная и сложно посчитать, то через max-width */
   max-width: 500px;
 }
+
 .price-wrap {
   display: flex;
 }
+
 .price-list {
   flex-basis: 50%;
   padding: 30px 40px;
 }
+
 .price-item {
   display: flex;
   justify-content: space-between;
 }
+
 .benefits-item {
   font-weight: 600;
   font-size: 11px;
@@ -247,13 +279,15 @@ address {
   line-height: 1.36;
   letter-spacing: 0.05em;
 }
+
 .team {
   background-color: var(--second-bg-color);
 }
 
 .team-item {
-  text-align: center;
   --grid-item: 3;
+
+  text-align: center;
 }
 
 .team-member {
@@ -267,12 +301,14 @@ address {
   line-height: 1.36;
   color: var(--accent-color);
 }
+
 .gallery-item {
   --grid-item: 4;
 }
+
 .dark-bg {
-  background-color: var(--dark-bg-color);
   color: var(--dark-bg-text-color);
+  background-color: var(--dark-bg-color);
 }
 
 .dark-bg .title,
