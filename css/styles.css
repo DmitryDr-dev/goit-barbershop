@@ -1,8 +1,8 @@
 /* raleway-regular - latin_cyrillic-ext_cyrillic */
 @font-face {
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   src: url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.eot?#iefix") format("embedded-opentype"),
     /* IE6-IE8 */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.woff2") format("woff2"),
@@ -10,11 +10,13 @@
     /* Modern Browsers */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-regular.svg#Raleway") format("svg"); /* Legacy iOS */
 }
+
 /* raleway-700 - latin_cyrillic-ext_cyrillic */
+
 @font-face {
   font-family: "Raleway";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   src: url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-700.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-700.eot?#iefix") format("embedded-opentype"),
     /* IE6-IE8 */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-700.woff2") format("woff2"),
@@ -22,6 +24,7 @@
     /* Modern Browsers */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-700.ttf") format("truetype"),
     /* Safari, Android, iOS */ url("../fonts/raleway-v19-latin_cyrillic-ext_cyrillic-700.svg#Raleway") format("svg"); /* Legacy iOS */
 }
+
 :root {
   --main-text-color: #555555;
   --dark-bg-text-color: #9da4bd;
@@ -36,6 +39,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::after,
 *::before {
@@ -65,20 +69,23 @@ img {
   height: auto;
   max-width: 100%;
 }
+
 address {
   font-style: normal;
 }
+
 /* tools */
 .visually-hidden {
   position: absolute !important;
+  overflow: hidden;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
 }
+
 /* general classes */
 .link {
   text-decoration: none;
@@ -104,30 +111,35 @@ address {
   padding-left: 15px;
   width: 1200px;
 }
+
 .flexbox {
   display: flex;
   justify-content: space-between;
 }
+
 .content-box {
   flex-basis: calc((100% - 30px) / 2);
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
   margin-top: -30px;
+  margin-left: -30px;
 }
+
 .grid-item {
     /* flex-basis: calc(100% / var(--grid-item) - 30px); */
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
-  margin-left: 30px;
   margin-top: 30px;
+  margin-left: 30px;
 }
+
 .button {
-  min-width: 160px;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   padding: 12px 20px;
+  min-width: 160px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -246,8 +258,7 @@ address {
 
 .hero-content {
   width: calc(100% / 12 * 5);
-  /* если стека некачественная и сложно посчитать, то через max-width */
-  max-width: 500px;
+  max-width: 500px; /* если стека некачественная и сложно посчитать, то через max-width */
 }
 
 .price-wrap {
