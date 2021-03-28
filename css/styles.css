@@ -129,7 +129,7 @@ address {
 }
 
 .grid-item {
-    /* flex-basis: calc(100% / var(--grid-item) - 30px); */
+  /* flex-basis: calc(100% / var(--grid-item) - 30px); */
   flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
   margin-top: 30px;
   margin-left: 30px;
@@ -165,6 +165,7 @@ address {
 
 .socials-list {
   display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -173,6 +174,44 @@ address {
 
 .socials-item:not(:last-child) {
   margin-right: 40px;
+}
+
+.social-icons {
+  display: inline-flex;
+}
+
+.social-icons-item + .social-icons-item {
+  margin-left: 10px;
+}
+
+.social-icons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+}
+
+.social-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--title-color);
+}
+
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon {
+  fill: var(--accent-color);
+}
+
+.line::before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .copyright {
@@ -196,6 +235,8 @@ address {
 }
 
 .title-label {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
@@ -256,7 +297,15 @@ address {
   min-height: 100vh;
 }
 
+.hero .container {
+  height: 100vh;
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-position: 115px;
+  background-repeat: no-repeat;
+}
+
 .hero-content {
+  margin-left: 200px;
   width: calc(100% / 12 * 5);
   max-width: 500px; /* если стека некачественная и сложно посчитать, то через max-width */
 }
@@ -265,14 +314,44 @@ address {
   display: flex;
 }
 
+.price {
+  background-image: url(../images/price/price-bg.png);
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .price-list {
   flex-basis: 50%;
   padding: 30px 40px;
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-list:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
 .price-item {
   display: flex;
   justify-content: space-between;
+}
+
+.price-item-serv {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.price-item-serv::after {
+  content: "";
+  display: block;
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .benefits-item {
@@ -297,7 +376,6 @@ address {
 
 .team-item {
   --grid-item: 3;
-
   text-align: center;
 }
 
@@ -311,6 +389,31 @@ address {
   font-size: 14px;
   line-height: 1.36;
   color: var(--accent-color);
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list .icon {
+  margin-right: 20px;
+  width: 24px;
+  height: 24px;
+  stroke: var(--dark-bg-text-color);
+}
+
+.contacts-link:hover .icon,
+.contacts-link:focus .icon {
+  stroke: var(--accent-color);
 }
 
 .gallery-item {
