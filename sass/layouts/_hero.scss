@@ -1,0 +1,41 @@
+.hero {
+  display: flex;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+
+.hero .container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* height: 100vh; */
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-position: 115px 0;
+  background-repeat: no-repeat;
+}
+
+.hero__content {
+  margin-left: 200px;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  width: calc(100% / 12 * 5);
+  max-width: 500px; /* если стека некачественная и сложно посчитать, то через max-width */
+}
+
+.hero__sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+  width: 115px;
+  background-color: #fff;
+}
+
+.hero__title {
+  font-size: 72px;
+  line-height: 1.18;
+}

@@ -1,0 +1,35 @@
+// сторонний код
+@import "./vendors/modern-normalize";
+// утилиты: миксины, переменные, placeholder
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+// Базовые стили. Подключение шрифтов, сбросы базовых стилей и первичная стилизация
+@import "./base/fonts";
+@import "./base/common";
+@import "./base/container";
+// Компоненты: маленькие фрагменты, которые вкладываются в разные блоки
+@import "./components/button";
+@import "./components/menu";
+@import "./components/social-list";
+@import "./components/social-icon";
+@import "./components/logo";
+@import "./components/title";
+@import "./components/title-label";
+@import "./components/form";
+@import "./components/modal";
+@import "./components/modal-form";
+// Layouts: основная разметка. Глобальные секции
+@import "./layouts/grid";
+@import "./layouts/navigation";
+@import "./layouts/section";
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/price";
+@import "./layouts/benefits";
+@import "./layouts/team";
+@import "./layouts/gallery";
+@import "./layouts/contact-us";
+@import "./layouts/contacts";
+@import "./layouts/footer";
